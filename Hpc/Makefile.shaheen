@@ -1,0 +1,52 @@
+
+# Author:
+#   Yuanqing Wu, KAUST, Saudi Arabia
+#
+# History:
+#   2015-2-9 by Yuanqing Wu
+#
+# Support:
+#   wuyuanq@gmail.com
+
+PROG = MulticomponentFlow_hpc
+defaults: ${PROG}
+
+#FCC = mpif90
+FCC = mpixlf90
+
+#FCFLAGS = -O3 -fdefault-real-8
+#FCFLAGS = -O3 -g
+#FCFLAGS = -O3 -fbounds-check 
+#FCFLAGS = -O3
+FCFLAGS = -qarch=450 -O3 -qstrict -qdbg
+
+vpath RST_model.F90 ../MulticomponentFlow_fortran
+vpath RST_PREOS.F90 ../MulticomponentFlow_fortran
+vpath RST_viscosity.F90 ../MulticomponentFlow_fortran
+vpath RST_proceAlloc.F90 ../CompositionalFlow_fortran_hpc
+
+#LIBS = -L/home/yuanqing/bin/hypre-2.9.0b-shaheen/src/hypre/lib -lHYPRE
+LIBS = -L/opt/share/hypre/2.9.0b/bgp/lib -lHYPRE
+
+FSRCS = RST_model.F90 RST_globalData.F90 RST_PREOS.F90 RST_viscosity.F90 RST_writeFile.F90 \
+      RST_genPlotfileMatlab.F90 RST_singlePhaseFlow.F90 RST_singlePhaseFlowDriver.F90 \
+      RST_proceAlloc.F90 infile_RSTi_singlePhaseFlow.F90 
+      
+%.o: %.F90
+	$(FCC) -c $(FCFLAGS) $^ -o $@
+
+FOBJS = $(FSRCS:.F90=.o)
+$(PROG):  $(FOBJS)
+	$(FCC) $(FCFLAGS) $(FOBJS) $(LIBS) -o $(PROG)
+
+all: $(PROG)
+
+.PHONY: clean
+
+clean:
+	rm -rf *.mod *.o core.* error.* output.* $(PROG)
+
+run: ${PROG} 
+	mpirun -np 8 ./${PROG} 
+
+
