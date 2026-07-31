@@ -1,7 +1,7 @@
 
 # MulticomponentFlow
 
-> **A high-performance compositional porous-media flow simulator based on the Peng–Robinson Equation of State (PR-EOS).**  
+> **A high-performance multi-component porous-media flow simulator based on the Peng–Robinson Equation of State (PR-EOS).**  
 > Developed for research in computational geoscience, reservoir simulation, and scientific computing.
 
 ![Fortran](https://img.shields.io/badge/Fortran-90%2F95-blue)
@@ -41,13 +41,13 @@ The simulator couples
 - Peng–Robinson EOS
 - composition-dependent fluid properties
 
-within a finite-volume framework.
+within a finite-difference framework.
 
 The project contains
 
 - **Serial Fortran solver**
 - **MPI parallel implementation**
-- **MATLAB preprocessing & visualization**
+- **MATLAB preprocessing & visualization, implementation**
 - Example benchmark cases
 
 ---
