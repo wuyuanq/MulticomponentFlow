@@ -69,19 +69,13 @@ The project contains
 
 The simulator solves
 
-\[
-\frac{\partial(\phi\rho)}{\partial t}
-+\nabla\cdot(\rho\mathbf{u})=q
-\]
+### Mass conservation
+
+∂(ϕρ)/∂t + ∇·(ρu) = q
 
 with Darcy's law
 
-\[
-\mathbf{u}
-=
--\frac{k}{\mu}
-(\nabla p-\rho g\nabla z)
-\]
+**u = -(k/μ)(∇p − ρg∇z)**
 
 where thermodynamic properties are evaluated through the Peng–Robinson EOS.
 
