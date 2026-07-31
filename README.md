@@ -235,7 +235,7 @@ The code follows a modular scientific-computing design:
 - Physics separated from numerics
 - Thermodynamics isolated from flow solver
 - Independent I/O layer
-- MATLAB only for post-processing
+- MATLAB for post-processing
 - Easy extension to additional EOS or multiphase models
 
 ---
