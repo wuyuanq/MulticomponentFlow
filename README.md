@@ -54,7 +54,7 @@ The project contains
 
 # 2. Key Features
 
-- ✔ Finite-volume formulation
+- ✔ Finite-difference formulation
 - ✔ Structured Cartesian grids
 - ✔ Peng–Robinson Equation of State
 - ✔ Composition-dependent density & viscosity
