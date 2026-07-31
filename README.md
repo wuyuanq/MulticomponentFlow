@@ -194,21 +194,20 @@ Create a `docs/` folder containing figures:
 
 ```text
 docs/
-    workflow.png
+    streamline.png
     pressure.png
     composition.png
     velocity.png
-    scalability.png
 ```
 
 ```markdown
-![Pressure](docs/pressure.png)
+[Pressure](docs/pressure.png)
 
-![Composition](docs/composition.png)
+[Composition](docs/composition.png)
 
-![Velocity](docs/velocity.png)
+[Velocity](docs/velocity.png)
 
-![Parallel Scaling](docs/scalability.png)
+[Streamline](docs/streamline.png)
 ```
 
 ---
