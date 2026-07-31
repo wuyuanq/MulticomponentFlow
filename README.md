@@ -190,27 +190,35 @@ mpirun -np 8 ./MulticomponentFlow_hpc
 
 # 9. Example Results
 
-Create a `docs/` folder containing figures:
+### Pressure Field
 
-```text
-docs/
-    streamline.png
-    pressure.png
-    composition.png
-    velocity.png
-```
-
-```markdown
-![Pressure](docs/pressure.png)
-
-![Composition](docs/composition.png)
-
-![Velocity](docs/velocity.png)
-
-![Streamline](docs/streamline.png)
-```
+<p align="center">
+  <img src="docs/pressure.png" width="700">
+</p>
 
 ---
+
+### Composition Distribution
+
+<p align="center">
+  <img src="docs/composition.png" width="700">
+</p>
+
+---
+
+### Velocity Field
+
+<p align="center">
+  <img src="docs/velocity.png" width="700">
+</p>
+
+---
+
+### Streamlines
+
+<p align="center">
+  <img src="docs/streamline.png" width="700">
+</p>
 
 # 10. Parallel Computing
 
