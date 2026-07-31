@@ -137,8 +137,8 @@ Hpc/
     Cluster scripts
 
 Matlab/
-    2D visualization
-    3D visualization
+    2D visualization, 2D implementation
+    3D visualization, 3D implementation
     Initial-condition generation
 ```
 
